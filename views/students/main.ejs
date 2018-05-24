@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Danh sach hoc sinh</title>
+	 <link rel='stylesheet' href='/stylesheets/style.css' />
+
+</head>
+<body style="margin: 60px; padding-left: 580px">
+	<div class="container">
+      <h3><a href="/students/create">Tao hoc sinh</a></h3>
+      <h1>Danh sach nhan vien</h1>
+      <% if(students.length>0) { %>
+      <table>
+        <thead>
+          <tr style="text-align: center;">
+            <th>STT</th>
+            <th>Ho va ten </th>
+            <th>Dia chi</th>
+            <th>Lop</th>
+            <th>SDT</th>
+          </tr>
+        </thead>
+        <tbody style="text-align: center;">
+          <% var stt=0;  %> 
+          <% for(var i=0; i<students.length;i++) { %>
+            <tr>
+              <td><%=  stt++; %></td>
+              <td><a href="/students/show/<%= students[i]._id%>"><%= students[i].fullname%></a></td>
+              <td><%= students[i].address%></td>
+              <td><%= students[i].class%></td>
+              <td><%= students[i].phone%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No students found.</div>
+      <% } %>
+    </div>
+</body>
+</html>

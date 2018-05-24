@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Danh sach nhan vien</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/employees/create">Tao nhan vien</a></h3>
+      <h1>Danh sach nhan vien</h1>
+      <% if(employees.length>0) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Ten nhan vien </th>
+            <th>Vi tri</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% var stt=0;  %> 
+          <% for(var i=0; i<employees.length;i++) { %>
+            <tr>
+              <td><%=  stt++; %></td>
+              <td><a href="/employees/show/<%= employees[i]._id%>"><%= employees[i].name%></a></td>
+              <td><%= employees[i].position%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No employees found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

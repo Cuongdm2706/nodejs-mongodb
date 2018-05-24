@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Them hoc sinh</title>
+    	 <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  </head>
+  <body  style="margin: 60px; padding-left: 580px">
+    <div class="container">
+      <h3><a href="/students">Danh sach hoc sinh</a></h3>
+      <h1>Tao nhanh vien</h1>
+      <form action="/students/save" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Ho va ten</td>
+              <td><input type="text" name="fullname" /></td>
+            </tr>
+            <tr>
+              <td>Dia chi</td>
+              <td><textarea name="address"></textarea></td>
+            </tr>
+            <tr>
+              <td>Lop</td>
+              <td><input type="text" name="class" /></td>
+            </tr>
+            <tr>
+              <td>SDT</td>
+              <td><input type="text" name="phone" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" value="Save" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

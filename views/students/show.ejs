@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+<body style="margin: 60px; padding-left: 580px">
+    <div class="container">
+      <h3><a href="/students">Danh sach nhan vien</a></h3>
+      <h1>Chi tiet nhan vien</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Ho va ten</td>
+            <td>:</td>
+            <td><%= student.fullname %></td>
+          </tr>
+          <tr>
+            <td>Dia chi</td>
+            <td>:</td>
+            <td><%= student.address %></td>
+          </tr>
+          <tr>
+            <td>Lop</td>
+            <td>:</td>
+            <td><%= student.class %></td>
+          </tr>
+          <tr>
+            <td>SDT</td>
+            <td>:</td>
+            <td>$<%= student.phone %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a href="/students/edit/<%= student._id%>">EDIT</a></h3>
+      <form action="/students/delete/<%= student._id%>" method="post">
+        <button type="submit">DELETE</button>
+      </form>
+    </div>
+  </body>
+</html>

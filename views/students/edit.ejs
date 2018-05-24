@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Employee</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+<body style="margin: 60px; padding-left: 580px">
+    <div class="container">
+      <h3><a href="/students">Employee List</a></h3>
+      <h1>Edit Employee</h1>
+      <form action="/students/update/<%= student._id%>" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Ho va ten</td>
+              <td><input type="text" name="fullname" value="<%= student.fullname %>" /></td>
+            </tr>
+            <tr>
+              <td>Dai chi</td>
+              <td><textarea name="address"><%= student.address %></textarea></td>
+            </tr>
+            <tr>
+              <td>Lop</td>
+              <td><input type="text" name="class" value="<%= student.class %>" /></td>
+            </tr>
+            <tr>
+              <td>SDT</td>
+              <td><input type="text" name="phone" value="<%= student.phone
+               %>" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
